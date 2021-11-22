@@ -14,7 +14,7 @@ import json
 
 
 def get_Redshift_connection():
-    # autocommit is False by default
+    # autocommit is True by default
     hook = PostgresHook(postgres_conn_id='redshift_dev_db')
     return hook.get_conn().cursor()
 
